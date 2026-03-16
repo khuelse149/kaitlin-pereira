@@ -24,15 +24,11 @@ I'm always happy to connect with fellow researchers, students, and anyone intere
     </div>
     <div class="contact-item">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-      <a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/kaitlin-huelse" target="_blank">LinkedIn</a>
     </div>
     <div class="contact-item">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
       <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
-    </div>
-    <div class="contact-item">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.627 3.6 3.476 6.168 3.125-4.318.906-8.16 3.11-4.63 9.014 3.906 5.403 6.57-1.384 7.838-5.009 1.268 3.625 2.583 9.834 7.838 5.009 3.53-5.904-.312-8.108-4.63-9.014 2.568.351 5.383-.498 6.168-3.125.246-.828.624-5.79.624-6.479 0-.689-.139-1.861-.902-2.203-.659-.299-1.664-.621-4.3 1.24C12.046 4.747 9.087 8.686 8 10.8h4z"/></svg>
-      <a href="https://bsky.app/" target="_blank">Bluesky</a>
     </div>
   </div>
 </div>

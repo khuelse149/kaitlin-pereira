@@ -1,44 +1,77 @@
 {{ define "main" }}
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <h1 class="hero-name">Kaitlin Pereira</h1>
-      <p class="hero-title">PhD Candidate, Civil &amp; Environmental Engineering</p>
-      <p class="hero-affiliation">Colorado School of Mines</p>
-      <div class="hero-badge">
-        <span class="badge">NOAA WINGS Fellow 2025&ndash;2026</span>
-      </div>
-      <p class="hero-bio">
-        I study winter wave dynamics in the Great Lakes to improve operational weather forecasting.
-        My research uses <strong>WAVEWATCH III</strong> numerical wave modeling, <strong>NOAA buoy observations</strong>,
-        and <strong>NASA SWOT satellite data</strong> to better understand how wind, waves, and surface roughness
-        interact in large lakes &mdash; and how to represent those processes more accurately in
-        forecast models that protect coastal communities.
-      </p>
-      <div class="hero-links">
-        <a href="{{ .Site.Params.bluesky }}" target="_blank" class="social-link" aria-label="Bluesky">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.627 3.6 3.476 6.168 3.125-4.318.906-8.16 3.11-4.63 9.014 3.906 5.403 6.57-1.384 7.838-5.009 1.268 3.625 2.583 9.834 7.838 5.009 3.53-5.904-.312-8.108-4.63-9.014 2.568.351 5.383-.498 6.168-3.125.246-.828.624-5.79.624-6.479 0-.689-.139-1.861-.902-2.203-.659-.299-1.664-.621-4.3 1.24C12.046 4.747 9.087 8.686 8 10.8h4z"/></svg>
-          <span>Bluesky</span>
-        </a>
-        <a href="{{ .Site.Params.linkedin }}" target="_blank" class="social-link" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-          <span>LinkedIn</span>
-        </a>
-        <a href="{{ .Site.Params.github }}" target="_blank" class="social-link" aria-label="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-          <span>GitHub</span>
-        </a>
-        <a href="{{ .Site.Params.scholar }}" target="_blank" class="social-link" aria-label="Google Scholar">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
-          <span>Google Scholar</span>
-        </a>
-      </div>
+<!-- Full-Viewport Hero with Animated Waves -->
+<section class="hero-landing">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-photo-circle">
+      <img src="{{ "images/headshot.jpg" | relURL }}" alt="Kaitlin Pereira">
     </div>
-    <div class="hero-photo">
-      <div class="photo-frame">
-        <img src="{{ "images/headshot-placeholder.jpg" | relURL }}" alt="Kaitlin Pereira">
+    <h1 class="hero-name">Kaitlin Pereira</h1>
+    <p class="hero-title">PhD Candidate</p>
+    <p class="hero-dept">Civil &amp; Environmental Engineering</p>
+    <p class="hero-school">Colorado School of Mines</p>
+    <div class="hero-social">
+      <a href="mailto:{{ .Site.Params.email }}" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      </a>
+      <a href="{{ .Site.Params.linkedin }}" target="_blank" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="{{ .Site.Params.github }}" target="_blank" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+      </a>
+      <a href="{{ .Site.Params.scholar }}" target="_blank" aria-label="Google Scholar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+      </a>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    </a>
+  </div>
+  <!-- Animated Wave Layers -->
+  <div class="wave-container">
+    <svg class="wave wave-1" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,60 C180,120 360,0 540,60 C720,120 900,0 1080,60 C1260,120 1440,0 1440,60 L1440,120 L0,120 Z" />
+    </svg>
+    <svg class="wave wave-2" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,80 C180,20 360,100 540,40 C720,0 900,80 1080,40 C1260,0 1440,80 1440,40 L1440,120 L0,120 Z" />
+    </svg>
+    <svg class="wave wave-3" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,90 C240,40 480,110 720,60 C960,10 1200,90 1440,50 L1440,120 L0,120 Z" />
+    </svg>
+  </div>
+</section>
+
+<!-- About / Welcome Section -->
+<section class="about-section" id="about">
+  <div class="container">
+    <h2 class="section-heading">Welcome</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I'm a PhD candidate in Civil &amp; Environmental Engineering at
+          <strong>Colorado School of Mines</strong> and a 2025&ndash;2026
+          <strong>NOAA WINGS Fellow</strong>. My research focuses on improving
+          how large lakes are represented in operational weather forecast models.
+        </p>
+        <p>
+          Using <strong>WAVEWATCH III</strong> numerical wave modeling,
+          <strong>NOAA buoy observations</strong>, and <strong>NASA SWOT
+          satellite data</strong>, I study how wind, waves, and surface roughness
+          interact across the Great Lakes &mdash; and how to represent those
+          processes more accurately in forecast models that protect coastal
+          communities during severe winter weather.
+        </p>
+        <p>
+          I grew up in Idaho with a deep fascination for water and the natural world.
+          That curiosity drives my work today: pushing science forward to deliver
+          more accurate and reliable weather forecasts.
+        </p>
+      </div>
+      <div class="about-photo">
+        <img src="{{ "images/conference.jpg" | relURL }}" alt="Kaitlin at AMS conference with a Sofar Spotter buoy">
+        <p class="photo-caption">At the AMS Annual Meeting with a Sofar Spotter wave buoy</p>
       </div>
     </div>
   </div>
@@ -88,20 +121,17 @@
 <section class="fellowship-section">
   <div class="container">
     <div class="fellowship-card">
-      <div class="fellowship-logo">
-        <img src="{{ "images/noaa-logo-placeholder.png" | relURL }}" alt="NOAA Logo">
-      </div>
       <div class="fellowship-text">
-        <h3>NOAA WINGS Fellow</h3>
+        <h3>NOAA WINGS Fellow 2025&ndash;2026</h3>
         <p>
-          Selected as a 2025&ndash;2026 <strong>W.I.N.G.S.</strong> (Weather Innovation for the Next Generation of Scientists)
+          Selected as a <strong>W.I.N.G.S.</strong> (Weather Innovation for the Next Generation of Scientists)
           Ph.D. Dissertation Fellow through the NOAA Weather Program Office, aligned with the
-          Earth Prediction Innovation Center (EPIC). This fellowship supports my research on
-          improving lake representation in operational weather forecasting to enhance community
-          preparedness for severe winter weather events.
+          Earth Prediction Innovation Center (EPIC). This fellowship supports my dissertation research,
+          <em>&ldquo;Improvement of Lake Representation in Operational Weather Forecasting,&rdquo;</em>
+          to enhance community preparedness for severe winter weather events over the Great Lakes.
         </p>
         <a href="https://wpo.noaa.gov/wings-fellow-kaitlin-pereira/" target="_blank" class="fellowship-link">
-          Learn more about the WINGS Fellowship &rarr;
+          Read more on the NOAA website &rarr;
         </a>
       </div>
     </div>
