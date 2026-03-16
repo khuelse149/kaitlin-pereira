@@ -64,6 +64,28 @@ My PhD research focuses on improving how large lakes are represented in operatio
 
 <div class="research-card">
   <div>
+    <h3>Great Lakes Ice Floe Parameterization (Submitted)</h3>
+    <p>
+      Current operational ice models for the Great Lakes use a fixed ice floe diameter of 300 m, but satellite observations reveal significant spatial and temporal variability in floe sizes. Using a decade of daily ice analyses from the U.S. and Canadian Ice Centers, I developed a spatially-varying floe size climatology and integrated it into the FVCOM hydrodynamic-ice model. Replacing the constant floe size with satellite-derived parameterizations improved ice thickness prediction accuracy by over 25% and produced more realistic spring melt timing — addressing a persistent bias in operational forecasts.
+    </p>
+    <p style="font-size: 0.88rem; color: var(--text-light); margin-top: 0.5rem;">
+      <strong>Pereira, K.</strong>, Anderson, E. J., Kessler, J., &amp; Fujisaki-Manome, A. "Integrating Ice Analyses and Varying Floe Size Parameterization into Great Lakes Ice Prediction." <em>Submitted.</em>
+    </p>
+    <div class="research-tags">
+      <span class="tag">FVCOM</span>
+      <span class="tag">Sea Ice Modeling</span>
+      <span class="tag tag-outline">Floe Size</span>
+      <span class="tag tag-outline">NIC Satellite Data</span>
+      <span class="tag tag-outline">CICE</span>
+    </div>
+  </div>
+  <div class="research-figure">
+    <!-- Replace with: images/research-ice.png -->
+  </div>
+</div>
+
+<div class="research-card">
+  <div>
     <h3>Coastal Hydrodynamic Modeling (M.S. Thesis)</h3>
     <p>
       For my Master's research at Colorado School of Mines, I developed and validated hydrodynamic models for coastal and lacustrine environments, building the foundation for my current work on Great Lakes wave dynamics.
@@ -75,5 +97,23 @@ My PhD research focuses on improving how large lakes are represented in operatio
   </div>
   <div class="research-figure">
     <!-- Replace with: images/research-masters.png -->
+  </div>
+</div>
+
+<div class="research-card">
+  <div>
+    <h3>Groundwater Geochemistry at a Superfund Site (Undergraduate Research)</h3>
+    <p>
+      As a research assistant at the University of Idaho (2016–2017), I conducted groundwater monitoring at a Superfund site, collecting water-quality samples for analysis of cations, anions, organic content, and stable isotopes (&delta;<sup>2</sup>H and &delta;<sup>18</sup>O). I performed acid titrations to determine alkalinity and acid neutralizing capacity, and evaluated metal particle dissociation and buffering behavior through titration data analysis. This early fieldwork experience — using peristaltic pumps, multi-parameter probes, and water level meters — shaped my approach to observational research.
+    </p>
+    <div class="research-tags">
+      <span class="tag tag-outline">Geochemistry</span>
+      <span class="tag tag-outline">Groundwater Monitoring</span>
+      <span class="tag tag-outline">Stable Isotopes</span>
+      <span class="tag tag-outline">Superfund</span>
+    </div>
+  </div>
+  <div class="research-figure">
+    <!-- Replace with: images/research-idaho.png -->
   </div>
 </div>

@@ -4,7 +4,12 @@ title: "Publications"
 
 ## Journal Articles
 
-<p style="color: var(--text-light); font-style: italic; margin-bottom: 2rem;">Manuscripts in preparation — check back soon.</p>
+<div class="pub-entry">
+  <div class="pub-type">Submitted</div>
+  <div class="pub-title">Integrating Ice Analyses and Varying Floe Size Parameterization into Great Lakes Ice Prediction</div>
+  <div class="pub-authors"><strong>Pereira, K.</strong>, Anderson, E. J., Kessler, J., Fujisaki-Manome, A.</div>
+  <div class="pub-venue">Submitted, 2026.</div>
+</div>
 
 ## Conference Presentations
 
