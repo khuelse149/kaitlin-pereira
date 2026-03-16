@@ -1,0 +1,9 @@
+name = "Academic"
+license = "MIT"
+licenselink = "https://github.com/"
+description = "A clean academic theme for Hugo"
+tags = ["academic", "portfolio", "responsive"]
+min_version = "0.100.0"
+
+[author]
+  name = "Kaitlin Pereira"

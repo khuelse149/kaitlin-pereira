@@ -1,0 +1,678 @@
+/* ============================================
+   Kaitlin Pereira — Academic Website
+   Color palette: Mines Navy + Silver/Slate
+   ============================================ */
+
+:root {
+  --navy: #21314d;
+  --navy-light: #2c4066;
+  --navy-dark: #172240;
+  --silver: #8c9aad;
+  --silver-light: #c4ced9;
+  --slate: #3d4f65;
+  --cream: #f8f9fb;
+  --white: #ffffff;
+  --gold: #c8b560;
+  --text: #2a3040;
+  --text-light: #5a6577;
+  --border: #dde2e8;
+  --shadow: rgba(33, 49, 77, 0.08);
+  --shadow-md: rgba(33, 49, 77, 0.12);
+}
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--navy); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--navy-light); }
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+/* ---- Navigation ---- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.site-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.01em;
+}
+
+.site-title:hover { color: var(--navy-light); }
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--navy);
+  border-bottom-color: var(--navy);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--navy);
+  transition: transform 0.2s;
+}
+
+/* ---- Hero Section ---- */
+.hero {
+  padding: 5rem 0 4rem;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.hero-title {
+  font-size: 1.15rem;
+  color: var(--slate);
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+}
+
+.hero-affiliation {
+  font-size: 1rem;
+  color: var(--silver);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.hero-badge {
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.9rem;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero-bio {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 1.75rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-light);
+  background: var(--white);
+  transition: all 0.2s;
+}
+
+.social-link:hover {
+  border-color: var(--navy);
+  color: var(--navy);
+  background: var(--cream);
+}
+
+.social-link svg { flex-shrink: 0; }
+
+.hero-photo { display: flex; justify-content: center; }
+
+.photo-frame {
+  width: 280px;
+  height: 340px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid var(--border);
+  background: var(--silver-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-frame::after {
+  content: "Photo";
+  position: absolute;
+  font-size: 1rem;
+  color: var(--silver);
+  font-weight: 500;
+}
+
+.photo-frame img[src*="placeholder"]::after { display: block; }
+
+/* ---- Education ---- */
+.education-section {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.section-heading {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--navy);
+  display: inline-block;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.edu-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--cream);
+  transition: border-color 0.2s;
+}
+
+.edu-card:hover { border-color: var(--silver); }
+
+.edu-icon {
+  flex-shrink: 0;
+  color: var(--navy);
+  padding-top: 0.15rem;
+}
+
+.edu-details h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+
+.edu-school {
+  font-size: 0.88rem;
+  color: var(--text);
+  margin-bottom: 0.15rem;
+}
+
+.edu-year {
+  font-size: 0.82rem;
+  color: var(--silver);
+  font-weight: 500;
+}
+
+.edu-note {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+/* ---- Fellowship ---- */
+.fellowship-section {
+  padding: 3rem 0 4rem;
+  background: var(--white);
+}
+
+.fellowship-card {
+  display: flex;
+  gap: 2rem;
+  padding: 2.5rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+  color: var(--white);
+  align-items: center;
+}
+
+.fellowship-logo {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.fellowship-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.fellowship-text h3 {
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.fellowship-text p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 1rem;
+}
+
+.fellowship-text strong { color: var(--white); }
+
+.fellowship-link {
+  display: inline-block;
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.fellowship-link:hover { color: var(--gold); opacity: 0.8; }
+
+/* ---- Page Content (inner pages) ---- */
+.page-content {
+  padding: 3rem 0 4rem;
+  min-height: 60vh;
+}
+
+.page-title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--navy);
+}
+
+.page-hero {
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 40%, rgba(23, 34, 64, 0.75));
+  border-radius: 10px;
+}
+
+.page-hero-title {
+  position: relative;
+  z-index: 1;
+  color: var(--white);
+  font-size: 2.2rem;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.content h3 {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.content p { margin-bottom: 1rem; }
+
+.content ul, .content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.content li { margin-bottom: 0.4rem; }
+
+/* ---- Research Cards ---- */
+.research-card {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  background: var(--cream);
+  transition: border-color 0.2s;
+}
+
+.research-card:hover { border-color: var(--silver); }
+
+.research-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.research-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.research-card .research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background: var(--navy);
+  color: var(--white);
+  letter-spacing: 0.03em;
+}
+
+.tag.tag-outline {
+  background: transparent;
+  border: 1px solid var(--silver);
+  color: var(--text-light);
+}
+
+.research-figure {
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--silver-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  position: relative;
+}
+
+.research-figure::after {
+  content: "Figure placeholder";
+  color: var(--silver);
+  font-size: 0.9rem;
+}
+
+.research-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Publication List ---- */
+.pub-entry {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.pub-entry:last-child { border-bottom: none; }
+
+.pub-type {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  background: var(--cream);
+  color: var(--navy);
+  border: 1px solid var(--border);
+  margin-bottom: 0.5rem;
+}
+
+.pub-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+
+.pub-authors {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.15rem;
+}
+
+.pub-venue {
+  font-size: 0.88rem;
+  color: var(--silver);
+  font-style: italic;
+}
+
+/* ---- CV Embed ---- */
+.cv-container {
+  margin-top: 1.5rem;
+}
+
+.cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  transition: background 0.2s;
+}
+
+.cv-download:hover { background: var(--navy-light); color: var(--white); }
+
+.cv-embed {
+  width: 100%;
+  height: 800px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* ---- Contact ---- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.contact-card {
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--cream);
+}
+
+.contact-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--navy);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.contact-item svg {
+  flex-shrink: 0;
+  color: var(--navy);
+}
+
+.contact-item a { font-weight: 500; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-photo { order: -1; }
+
+  .photo-frame {
+    width: 220px;
+    height: 270px;
+    margin: 0 auto;
+  }
+
+  .hero-name { font-size: 2.3rem; }
+
+  .hero-links { justify-content: center; }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .research-card {
+    grid-template-columns: 1fr;
+  }
+
+  .research-figure {
+    min-height: 160px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fellowship-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 1rem 2rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    gap: 0.75rem;
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+
+  .nav-links.open { display: flex; }
+
+  .hero-name { font-size: 1.9rem; }
+  .hero { padding: 3rem 0; }
+
+  .page-title { font-size: 1.7rem; }
+
+  .container { padding: 0 1.25rem; }
+}

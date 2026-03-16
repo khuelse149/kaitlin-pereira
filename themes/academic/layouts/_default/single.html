@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="page-content">
+  <div class="container">
+    {{ if .Params.hero }}
+    <div class="page-hero" style="background-image: url('{{ .Params.hero | relURL }}');">
+      <h1 class="page-hero-title">{{ .Title }}</h1>
+    </div>
+    {{ else }}
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ end }}
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end }}

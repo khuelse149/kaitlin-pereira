@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="{{ "/" | relURL }}" class="site-title">Kaitlin Pereira</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL | relURL }}" class="{{ if $.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</header>
