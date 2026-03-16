@@ -86,9 +86,9 @@ My PhD research focuses on improving how large lakes are represented in operatio
 
 <div class="research-card">
   <div>
-    <h3>Coastal Hydrodynamic Modeling (M.S. Thesis)</h3>
+    <h3>Coastal Hydrodynamic Modeling</h3>
     <p>
-      For my Master's research at Colorado School of Mines, I developed and validated hydrodynamic models for coastal and lacustrine environments, building the foundation for my current work on Great Lakes wave dynamics.
+      At Colorado School of Mines, I developed and validated hydrodynamic models for coastal and lacustrine environments, building the foundation for my current work on Great Lakes wave dynamics.
     </p>
     <div class="research-tags">
       <span class="tag tag-outline">FVCOM</span>
