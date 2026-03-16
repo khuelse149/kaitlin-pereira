@@ -179,39 +179,7 @@
     counters.forEach(function(el) { counterObserver.observe(el); });
   }
 
-  // ---- 7. GREAT LAKES SVG DRAW ANIMATION ----
-  var lakePaths = document.querySelectorAll('.lake-path');
-  if (lakePaths.length) {
-    lakePaths.forEach(function(path) {
-      var len = path.getTotalLength();
-      path.style.strokeDasharray = len;
-      path.style.strokeDashoffset = len;
-    });
-
-    var lakeObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.lake-path').forEach(function(path, i) {
-            setTimeout(function() {
-              path.classList.add('drawn');
-            }, i * 300);
-          });
-          // Show labels and dots after paths draw
-          setTimeout(function() {
-            entry.target.querySelectorAll('.lake-label, .buoy-dot').forEach(function(el) {
-              el.classList.add('visible');
-            });
-          }, 1800);
-          lakeObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    var svg = document.querySelector('.lakes-svg');
-    if (svg) lakeObserver.observe(svg);
-  }
-
-  // ---- 8. PARALLAX ON HERO (subtle) ----
+  // ---- 7. PARALLAX ON HERO (subtle) ----
   var heroContent = document.querySelector('.hero-content');
   if (heroContent && window.innerWidth > 768) {
     window.addEventListener('scroll', function() {

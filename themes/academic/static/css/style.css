@@ -566,54 +566,24 @@ h1, h2, h3, h4 {
   align-items: start;
 }
 
-/* SVG Lakes */
-.lakes-svg {
+/* Bathymetry Image */
+.bathy-image-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(10, 22, 40, 0.4);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bathy-image-wrapper:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 16px 60px rgba(10, 22, 40, 0.5);
+}
+
+.bathy-image-wrapper img {
   width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-}
-
-.lake-path {
-  fill: none;
-  stroke: var(--navy);
-  stroke-width: 2;
-  transition: stroke-dashoffset 1.2s cubic-bezier(0.22, 1, 0.36, 1),
-              fill 0.6s ease 1s;
-}
-
-.lake-path.drawn {
-  stroke-dashoffset: 0 !important;
-  fill: var(--lake-foam);
-  stroke: var(--lake-light);
-}
-
-.lake-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  fill: var(--navy);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  opacity: 0;
-  transition: opacity 0.6s;
-}
-
-.lake-label.visible { opacity: 0.8; }
-
-.buoy-dot {
-  fill: var(--gold);
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
-.buoy-dot.visible {
-  opacity: 1;
-  animation: buoy-pulse 2s ease-in-out infinite;
-}
-
-@keyframes buoy-pulse {
-  0%, 100% { r: 4; opacity: 1; }
-  50% { r: 6; opacity: 0.6; }
+  display: block;
+  border-radius: 12px;
 }
 
 /* Objective Cards */
