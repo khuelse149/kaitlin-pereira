@@ -820,7 +820,8 @@ h1, h2, h3, h4 {
    ============================================ */
 
 .page-content {
-  padding: 7rem 0 4rem;
+  padding-top: 120px;
+  padding-bottom: 4rem;
   min-height: 60vh;
 }
 
