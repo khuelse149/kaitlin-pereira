@@ -86,13 +86,16 @@ My PhD research focuses on improving how large lakes are represented in operatio
 
 <div class="research-card">
   <div>
-    <h3>Coastal Hydrodynamic Modeling</h3>
+    <h3>UFS Coastal Applications Team — FVCOM Model Evaluation</h3>
     <p>
-      At Colorado School of Mines, I developed and validated hydrodynamic models for coastal and lacustrine environments, building the foundation for my current work on Great Lakes wave dynamics.
+      Served as an FVCOM tester for the NOAA Unified Forecast System (UFS) Coastal Applications Team (CAT) Water Quantity evaluation. As part of Eric Anderson's group at Colorado School of Mines, I conducted multi-round hindcast evaluations of the Finite Volume Community Ocean Model (FVCOM) for coastal applications including tidal simulation, atmosphere-ocean coupling, and coupled wave modeling with WAVEWATCH III. Evaluation focused on the NY Harbor domain using TACC high-performance computing resources, with skill assessment against CO-OPS and USGS water level observations to inform NOAA's selection of next-generation coupled coastal forecast models.
     </p>
     <div class="research-tags">
-      <span class="tag tag-outline">FVCOM</span>
-      <span class="tag tag-outline">Hydrodynamic Modeling</span>
+      <span class="tag">FVCOM</span>
+      <span class="tag">UFS</span>
+      <span class="tag tag-outline">NOAA CAT</span>
+      <span class="tag tag-outline">Coastal Modeling</span>
+      <span class="tag tag-outline">Model Evaluation</span>
     </div>
   </div>
   <div class="research-figure">
