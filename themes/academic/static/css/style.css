@@ -455,42 +455,8 @@ h1, h2, h3, h4 {
 .about-section {
   padding: 6rem 0 4rem;
   background: var(--white);
-  position: relative;
-  overflow: hidden;
 }
 
-/* Animated wave-line background (oscilloscope/spectral feel) */
-.wave-line-bg {
-  position: absolute;
-  inset: 0;
-  background:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 59px,
-      rgba(33, 49, 77, 0.025) 59px,
-      rgba(33, 49, 77, 0.025) 60px
-    );
-  pointer-events: none;
-}
-
-.wave-line-bg::before {
-  content: "";
-  position: absolute;
-  top: 0; left: -100%; right: 0; bottom: 0;
-  width: 300%;
-  background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='60'%3E%3Cpath d='M0,30 Q100,10 200,30 Q300,50 400,30 Q500,10 600,30 Q700,50 800,30' fill='none' stroke='rgba(26,82,118,0.08)' stroke-width='1.5'/%3E%3C/svg%3E") repeat-x,
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='50'%3E%3Cpath d='M0,25 Q75,8 150,25 Q225,42 300,25 Q375,8 450,25 Q525,42 600,25' fill='none' stroke='rgba(26,82,118,0.06)' stroke-width='1'/%3E%3C/svg%3E") repeat-x;
-  background-size: 800px 60px, 600px 50px;
-  background-position: 0 0, 0 30px;
-  animation: wave-bg-scroll 20s linear infinite;
-}
-
-@keyframes wave-bg-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-33.33%); }
-}
 
 .section-heading {
   font-size: 2rem;
