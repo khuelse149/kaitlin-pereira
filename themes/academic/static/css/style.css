@@ -639,29 +639,6 @@ h1, h2, h3, h4 {
   border-radius: 8px;
 }
 
-/* Ombre fade into white on left and right edges */
-.bathy-fullwidth::before,
-.bathy-fullwidth::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 80px;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.bathy-fullwidth::before {
-  left: 4rem;
-  background: linear-gradient(to right, var(--white) 0%, transparent 100%);
-  border-radius: 8px 0 0 8px;
-}
-
-.bathy-fullwidth::after {
-  right: 4rem;
-  background: linear-gradient(to left, var(--white) 0%, transparent 100%);
-  border-radius: 0 8px 8px 0;
-}
 
 /* ---- Wave Spectrum in Fellowship Card ---- */
 #spectrum-canvas {
