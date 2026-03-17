@@ -3,7 +3,7 @@
 <!-- ===== FULL-VIEWPORT HERO ===== -->
 <section class="hero-landing">
   <div class="hero-overlay"></div>
-  <canvas id="particles-canvas"></canvas>
+  <canvas id="water-canvas"></canvas>
   <div class="hero-content">
     <div class="hero-photo-circle reveal-on-load">
       <img src="{{ "images/headshot.jpg" | relURL }}" alt="Kaitlin Pereira">
@@ -28,27 +28,47 @@
       </a>
     </div>
     <a href="#about" class="scroll-indicator" aria-label="Scroll down">
-      <div class="mouse">
-        <div class="mouse-wheel"></div>
-      </div>
+      <div class="mouse"><div class="mouse-wheel"></div></div>
     </a>
   </div>
-  <!-- Animated Wave Layers -->
+  <!-- Realistic multi-layer waves with floating buoy -->
   <div class="wave-container">
-    <svg class="wave wave-1" viewBox="0 0 1440 120" preserveAspectRatio="none">
-      <path d="M0,60 C180,120 360,0 540,60 C720,120 900,0 1080,60 C1260,120 1440,0 1440,60 L1440,120 L0,120 Z" />
+    <svg class="wave wave-1" viewBox="0 0 1440 180" preserveAspectRatio="none">
+      <path d="M0,100 C120,140 240,60 360,100 C480,140 600,60 720,100 C840,140 960,60 1080,100 C1200,140 1320,60 1440,100 L1440,180 L0,180 Z"/>
     </svg>
-    <svg class="wave wave-2" viewBox="0 0 1440 120" preserveAspectRatio="none">
-      <path d="M0,80 C180,20 360,100 540,40 C720,0 900,80 1080,40 C1260,0 1440,80 1440,40 L1440,120 L0,120 Z" />
+    <svg class="wave wave-2" viewBox="0 0 1440 180" preserveAspectRatio="none">
+      <path d="M0,120 C160,80 320,150 480,110 C640,70 800,140 960,100 C1120,60 1280,130 1440,90 L1440,180 L0,180 Z"/>
     </svg>
-    <svg class="wave wave-3" viewBox="0 0 1440 120" preserveAspectRatio="none">
-      <path d="M0,90 C240,40 480,110 720,60 C960,10 1200,90 1440,50 L1440,120 L0,120 Z" />
+    <svg class="wave wave-3" viewBox="0 0 1440 180" preserveAspectRatio="none">
+      <path d="M0,130 C200,100 400,155 600,120 C800,85 1000,150 1200,115 C1350,90 1400,130 1440,110 L1440,180 L0,180 Z"/>
     </svg>
+    <svg class="wave wave-4" viewBox="0 0 1440 180" preserveAspectRatio="none">
+      <path d="M0,145 C180,125 360,160 540,140 C720,120 900,155 1080,135 C1260,115 1380,150 1440,130 L1440,180 L0,180 Z"/>
+    </svg>
+    <!-- Floating Spotter Buoy -->
+    <div class="floating-buoy">
+      <svg viewBox="0 0 60 80" width="40" height="54" xmlns="http://www.w3.org/2000/svg">
+        <!-- Antenna -->
+        <line x1="30" y1="2" x2="30" y2="22" stroke="#aaa" stroke-width="1.5"/>
+        <circle cx="30" cy="2" r="2.5" fill="#c8b560"/>
+        <!-- Body -->
+        <path d="M18,28 Q18,22 24,22 L36,22 Q42,22 42,28 L42,42 Q42,52 30,55 Q18,52 18,42 Z" fill="#e8b820" stroke="#c8a010" stroke-width="1"/>
+        <!-- Solar panels -->
+        <rect x="21" y="26" width="7" height="5" rx="1" fill="#2a4a7a" stroke="#1a3a6a" stroke-width="0.5"/>
+        <rect x="32" y="26" width="7" height="5" rx="1" fill="#2a4a7a" stroke="#1a3a6a" stroke-width="0.5"/>
+        <!-- Center dome -->
+        <circle cx="30" cy="38" r="6" fill="#ddd" stroke="#bbb" stroke-width="0.8"/>
+        <circle cx="30" cy="38" r="3" fill="#ccc"/>
+        <!-- Water line -->
+        <ellipse cx="30" cy="52" rx="18" ry="4" fill="rgba(255,255,255,0.15)"/>
+      </svg>
+    </div>
   </div>
 </section>
 
 <!-- ===== ABOUT / WELCOME ===== -->
 <section class="about-section" id="about">
+  <div class="wave-line-bg"></div>
   <div class="container">
     <h2 class="section-heading scroll-reveal">About Me</h2>
     <div class="about-grid">
@@ -83,39 +103,50 @@
 
 <!-- ===== RESEARCH AT A GLANCE (animated stats) ===== -->
 <section class="stats-section">
+  <!-- Orbiting satellite -->
+  <div class="orbiting-satellite">
+    <svg viewBox="0 0 80 40" width="60" height="30" xmlns="http://www.w3.org/2000/svg">
+      <rect x="25" y="12" width="30" height="16" rx="2" fill="#8c9aad" stroke="#c4ced9" stroke-width="0.8"/>
+      <rect x="4" y="10" width="20" height="20" rx="1" fill="#2a4a7a" stroke="#5a8abe" stroke-width="0.5"/>
+      <rect x="56" y="10" width="20" height="20" rx="1" fill="#2a4a7a" stroke="#5a8abe" stroke-width="0.5"/>
+      <line x1="14" y1="10" x2="14" y2="30" stroke="#5a8abe" stroke-width="0.3"/>
+      <line x1="66" y1="10" x2="66" y2="30" stroke="#5a8abe" stroke-width="0.3"/>
+      <circle cx="40" cy="20" r="3" fill="#c8b560"/>
+    </svg>
+  </div>
   <div class="wave-divider-top">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,60 C360,0 720,40 1080,10 C1260,0 1380,30 1440,20 L1440,0 L0,0 Z" fill="var(--cream)"/></svg>
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,60 C360,0 720,40 1080,10 C1260,0 1380,30 1440,20 L1440,0 L0,0 Z" fill="var(--white)"/></svg>
   </div>
   <div class="container">
     <h2 class="section-heading section-heading-light scroll-reveal">Research at a Glance</h2>
     <div class="stats-grid">
       <div class="stat-card scroll-reveal">
-        <div class="stat-number" data-target="5">0</div>
-        <div class="stat-label">Great Lakes Studied</div>
         <div class="stat-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
+        <div class="stat-number" data-target="5">0</div>
+        <div class="stat-label">Great Lakes Studied</div>
       </div>
       <div class="stat-card scroll-reveal delay-1">
-        <div class="stat-number" data-target="145">0</div>
-        <div class="stat-label">Model Simulations</div>
         <div class="stat-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
+        <div class="stat-number" data-target="145">0</div>
+        <div class="stat-label">Model Simulations</div>
       </div>
       <div class="stat-card scroll-reveal delay-2">
-        <div class="stat-number" data-target="253" data-suffix="K">0</div>
-        <div class="stat-label">Model Grid Nodes</div>
         <div class="stat-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
         </div>
+        <div class="stat-number" data-target="253" data-suffix="K">0</div>
+        <div class="stat-label">Model Grid Nodes</div>
       </div>
       <div class="stat-card scroll-reveal delay-3">
-        <div class="stat-number" data-target="244">0</div>
-        <div class="stat-label">SWOT Satellite Matches</div>
         <div class="stat-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
         </div>
+        <div class="stat-number" data-target="244">0</div>
+        <div class="stat-label">SWOT Satellite Matches</div>
       </div>
     </div>
   </div>
@@ -124,31 +155,81 @@
   </div>
 </section>
 
-<!-- ===== GREAT LAKES MAP + RESEARCH OBJECTIVES ===== -->
+<!-- ===== RESEARCH OBJECTIVES with SVG illustrations ===== -->
 <section class="objectives-section">
   <div class="container">
     <h2 class="section-heading scroll-reveal">What I Study</h2>
     <div class="objectives-grid">
       <div class="objectives-map scroll-reveal">
         <div class="bathy-image-wrapper">
-          <img src="{{ "images/greatlakes_bathymetry.png" | relURL }}" alt="GLWU Unstructured Grid — Great Lakes bathymetry visualization showing 253,010 nodes and 418,488 elements with mesh resolution colored from deep (dark) to shallow (light)">
+          <img src="{{ "images/greatlakes_bathymetry.png" | relURL }}" alt="GLWU Unstructured Grid — Great Lakes wave domain">
         </div>
       </div>
       <div class="objectives-list">
         <div class="objective-card scroll-reveal">
-          <div class="objective-number">01</div>
-          <h3>Winter Wave Model Assessment</h3>
-          <p>Evaluating WAVEWATCH III accuracy across all five Great Lakes using newly deployed winter buoys and high-resolution atmospheric forcing to identify dominant sources of forecast error.</p>
+          <div class="objective-icon">
+            <!-- Spotter buoy sketch -->
+            <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg" class="sketch-icon">
+              <line x1="24" y1="4" x2="24" y2="16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              <circle cx="24" cy="4" r="2" fill="currentColor" opacity="0.6"/>
+              <path d="M16,20 Q16,16 20,16 L28,16 Q32,16 32,20 L32,28 Q32,34 24,36 Q16,34 16,28 Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+              <rect x="19" y="19" width="4" height="3" rx="0.5" fill="currentColor" opacity="0.3"/>
+              <rect x="25" y="19" width="4" height="3" rx="0.5" fill="currentColor" opacity="0.3"/>
+              <circle cx="24" cy="27" r="3.5" fill="none" stroke="currentColor" stroke-width="1"/>
+              <path d="M8,38 Q16,34 24,38 Q32,42 40,38" fill="none" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+              <path d="M6,42 Q14,38 22,42 Q30,46 38,42" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Winter Wave Model Assessment</h3>
+            <p>Evaluating WAVEWATCH III accuracy across all five Great Lakes using newly deployed winter buoys and high-resolution atmospheric forcing to identify dominant sources of forecast error.</p>
+          </div>
         </div>
         <div class="objective-card scroll-reveal delay-1">
-          <div class="objective-number">02</div>
-          <h3>SWOT Satellite Integration</h3>
-          <p>Building the first satellite-based spatial validation of wave forecasts in the Great Lakes using NASA&rsquo;s SWOT mission. Bridging point-based buoy observations to full-domain model evaluation.</p>
+          <div class="objective-icon">
+            <!-- SWOT satellite sketch -->
+            <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg" class="sketch-icon">
+              <rect x="17" y="18" width="14" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+              <rect x="4" y="17" width="12" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="1"/>
+              <rect x="32" y="17" width="12" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="1"/>
+              <line x1="10" y1="17" x2="10" y2="29" stroke="currentColor" stroke-width="0.5" opacity="0.4"/>
+              <line x1="38" y1="17" x2="38" y2="29" stroke="currentColor" stroke-width="0.5" opacity="0.4"/>
+              <circle cx="24" cy="23" r="2" fill="currentColor" opacity="0.4"/>
+              <!-- Radar beams -->
+              <path d="M20,28 L10,44" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.3"/>
+              <path d="M28,28 L38,44" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.3"/>
+              <!-- Orbit arc -->
+              <path d="M2,10 Q24,4 46,10" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.25" stroke-dasharray="3,2"/>
+            </svg>
+          </div>
+          <div>
+            <h3>SWOT Satellite Integration</h3>
+            <p>Building the first satellite-based spatial validation of wave forecasts in the Great Lakes using NASA&rsquo;s SWOT mission. Bridging point-based buoy observations to full-domain model evaluation.</p>
+          </div>
         </div>
         <div class="objective-card scroll-reveal delay-2">
-          <div class="objective-number">03</div>
-          <h3>Surface Roughness &amp; Wind Gustiness</h3>
-          <p>Investigating how short-period wind fluctuations interact with wave development and surface roughness across the fetch-limited Great Lakes through idealized numerical experiments.</p>
+          <div class="objective-icon">
+            <!-- Wind + wave spectrum sketch -->
+            <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg" class="sketch-icon">
+              <!-- Wind arrows -->
+              <path d="M4,12 L18,12" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+              <path d="M15,9 L18,12 L15,15" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8,18 L20,18" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
+              <path d="M17,16 L20,18 L17,20" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+              <!-- Wave spectrum -->
+              <path d="M4,36 Q10,28 16,36 Q22,44 28,32 Q32,24 36,34 Q40,40 44,36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              <!-- Roughness dots -->
+              <circle cx="32" cy="14" r="1" fill="currentColor" opacity="0.3"/>
+              <circle cx="36" cy="11" r="1.5" fill="currentColor" opacity="0.25"/>
+              <circle cx="40" cy="15" r="1" fill="currentColor" opacity="0.35"/>
+              <circle cx="38" cy="8" r="0.8" fill="currentColor" opacity="0.2"/>
+              <circle cx="44" cy="12" r="1.2" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Surface Roughness &amp; Wind Gustiness</h3>
+            <p>Investigating how short-period wind fluctuations interact with wave development and surface roughness across the fetch-limited Great Lakes through idealized numerical experiments.</p>
+          </div>
         </div>
       </div>
     </div>
