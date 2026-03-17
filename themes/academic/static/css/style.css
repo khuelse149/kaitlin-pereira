@@ -627,14 +627,16 @@ h1, h2, h3, h4 {
 
 /* Full-Width Bathymetry Map */
 .bathy-fullwidth {
-  width: 100%;
-  margin: 1.5rem 0 2.5rem;
-  box-shadow: 0 8px 40px rgba(10, 22, 40, 0.35);
+  max-width: 1200px;
+  margin: 1.5rem auto 2.5rem;
+  padding: 0 2rem;
 }
 
 .bathy-fullwidth img {
   width: 100%;
   display: block;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(10, 22, 40, 0.35);
 }
 
 /* ---- Wave Spectrum in Fellowship Card ---- */
