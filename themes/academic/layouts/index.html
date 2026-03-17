@@ -154,69 +154,17 @@
   </div>
 </section>
 
-<!-- ===== RESEARCH OBJECTIVES with SVG illustrations ===== -->
+<!-- ===== RESEARCH OBJECTIVES ===== -->
 <section class="objectives-section">
   <div class="container">
     <h2 class="section-heading scroll-reveal">What I Study</h2>
-    <div class="objectives-grid">
-      <div class="objectives-map scroll-reveal">
-        <div class="bathy-image-wrapper" id="lake-map">
-          <img src="{{ "images/greatlakes_bathymetry.png" | relURL }}" alt="GLWU Unstructured Grid — Great Lakes wave domain">
-          <!-- Interactive lake hotspots -->
-          <div class="lake-hotspot" style="top:26%;left:22%" data-lake="Superior" data-scroll="obj-1">
-            <div class="hotspot-ping"></div>
-            <div class="hotspot-dot"></div>
-            <div class="hotspot-tooltip">
-              <strong>Lake Superior</strong>
-              <span>Max depth: 406 m &middot; Area: 82,100 km&sup2;</span>
-              <span>Largest Great Lake by surface area</span>
-              <span class="tooltip-hint">Click to explore &rarr;</span>
-            </div>
-          </div>
-          <div class="lake-hotspot" style="top:55%;left:27%" data-lake="Michigan" data-scroll="obj-1">
-            <div class="hotspot-ping"></div>
-            <div class="hotspot-dot"></div>
-            <div class="hotspot-tooltip">
-              <strong>Lake Michigan</strong>
-              <span>Max depth: 281 m &middot; Area: 57,800 km&sup2;</span>
-              <span>Only Great Lake entirely within the U.S.</span>
-              <span class="tooltip-hint">Click to explore &rarr;</span>
-            </div>
-          </div>
-          <div class="lake-hotspot" style="top:40%;left:48%" data-lake="Huron" data-scroll="obj-1">
-            <div class="hotspot-ping"></div>
-            <div class="hotspot-dot"></div>
-            <div class="hotspot-tooltip">
-              <strong>Lake Huron</strong>
-              <span>Max depth: 229 m &middot; Area: 59,600 km&sup2;</span>
-              <span>Contains 30,000 islands including Manitoulin</span>
-              <span class="tooltip-hint">Click to explore &rarr;</span>
-            </div>
-          </div>
-          <div class="lake-hotspot" style="top:66%;left:50%" data-lake="Erie" data-scroll="obj-3">
-            <div class="hotspot-ping"></div>
-            <div class="hotspot-dot"></div>
-            <div class="hotspot-tooltip tooltip-left">
-              <strong>Lake Erie</strong>
-              <span>Max depth: 64 m &middot; Area: 25,700 km&sup2;</span>
-              <span>Shallowest &mdash; strongest wind-wave coupling</span>
-              <span class="tooltip-hint">Click to explore &rarr;</span>
-            </div>
-          </div>
-          <div class="lake-hotspot" style="top:40%;left:70%" data-lake="Ontario" data-scroll="obj-2">
-            <div class="hotspot-ping"></div>
-            <div class="hotspot-dot"></div>
-            <div class="hotspot-tooltip tooltip-left">
-              <strong>Lake Ontario</strong>
-              <span>Max depth: 244 m &middot; Area: 19,000 km&sup2;</span>
-              <span>Smallest by area, deepest per unit area</span>
-              <span class="tooltip-hint">Click to explore &rarr;</span>
-            </div>
-          </div>
-          <p class="map-hint scroll-reveal delay-2">Hover over a lake to learn more</p>
-        </div>
-      </div>
-      <div class="objectives-list">
+  </div>
+  <!-- Full-width bathymetry map -->
+  <div class="bathy-fullwidth scroll-reveal">
+    <img src="{{ "images/greatlakes_bathymetry.png" | relURL }}" alt="GLWU Unstructured Grid — Great Lakes wave domain with bathymetry contours">
+  </div>
+  <div class="container">
+    <div class="objectives-cards">
         <div class="objective-card scroll-reveal" id="obj-1">
           <div class="objective-icon">
             <!-- Spotter buoy sketch -->
@@ -282,7 +230,6 @@
             <p>Investigating how short-period wind fluctuations interact with wave development and surface roughness across the fetch-limited Great Lakes through idealized numerical experiments.</p>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </section>

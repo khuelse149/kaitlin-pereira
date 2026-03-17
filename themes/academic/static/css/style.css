@@ -618,136 +618,23 @@ h1, h2, h3, h4 {
    GREAT LAKES MAP + OBJECTIVES
    ============================================ */
 
-.objectives-grid {
+/* Objectives cards in a row below the map */
+.objectives-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-/* Interactive Bathymetry Map */
-.bathy-image-wrapper {
-  border-radius: 12px;
-  overflow: visible;
-  box-shadow: 0 8px 40px rgba(10, 22, 40, 0.4);
-  position: relative;
+/* Full-Width Bathymetry Map */
+.bathy-fullwidth {
+  width: 100%;
+  margin: 1.5rem 0 2.5rem;
+  box-shadow: 0 8px 40px rgba(10, 22, 40, 0.35);
 }
 
-.bathy-image-wrapper img {
+.bathy-fullwidth img {
   width: 100%;
   display: block;
-  border-radius: 12px;
-}
-
-.map-hint {
-  text-align: center;
-  font-size: 0.78rem;
-  color: var(--silver);
-  margin-top: 0.75rem;
-  font-style: italic;
-}
-
-/* Lake Hotspots */
-.lake-hotspot {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  z-index: 5;
-}
-
-.hotspot-dot {
-  position: absolute;
-  inset: 4px;
-  border-radius: 50%;
-  background: var(--gold);
-  border: 2px solid rgba(255,255,255,0.8);
-  box-shadow: 0 0 8px rgba(200,181,96,0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
-  z-index: 2;
-}
-
-.lake-hotspot:hover .hotspot-dot {
-  transform: scale(1.5);
-  box-shadow: 0 0 16px rgba(200,181,96,0.8);
-}
-
-.hotspot-ping {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 2px solid var(--gold);
-  opacity: 0;
-  animation: hotspot-ping 3s ease-out infinite;
-}
-
-@keyframes hotspot-ping {
-  0% { transform: scale(1); opacity: 0.6; }
-  100% { transform: scale(3.5); opacity: 0; }
-}
-
-/* Stagger the pings */
-.lake-hotspot:nth-child(2) .hotspot-ping { animation-delay: 0.6s; }
-.lake-hotspot:nth-child(3) .hotspot-ping { animation-delay: 1.2s; }
-.lake-hotspot:nth-child(4) .hotspot-ping { animation-delay: 1.8s; }
-.lake-hotspot:nth-child(5) .hotspot-ping { animation-delay: 2.4s; }
-
-/* Tooltip */
-.hotspot-tooltip {
-  position: absolute;
-  left: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(14, 23, 41, 0.95);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(200,181,96,0.3);
-  border-radius: 8px;
-  padding: 0.85rem 1rem;
-  width: 230px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s, transform 0.3s;
-  transform: translateY(-50%) translateX(8px);
-  z-index: 10;
-}
-
-.hotspot-tooltip.tooltip-left {
-  left: auto;
-  right: 24px;
-  transform: translateY(-50%) translateX(-8px);
-}
-
-.lake-hotspot:hover .hotspot-tooltip {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0);
-  pointer-events: auto;
-}
-
-.lake-hotspot:hover .hotspot-tooltip.tooltip-left {
-  transform: translateY(-50%) translateX(0);
-}
-
-.hotspot-tooltip strong {
-  display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
-  color: var(--gold);
-  margin-bottom: 0.35rem;
-}
-
-.hotspot-tooltip span {
-  display: block;
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.75);
-  line-height: 1.5;
-}
-
-.tooltip-hint {
-  margin-top: 0.4rem;
-  color: var(--lake-light) !important;
-  font-weight: 500;
-  font-size: 0.72rem !important;
 }
 
 /* ---- Wave Spectrum in Fellowship Card ---- */
@@ -764,20 +651,24 @@ h1, h2, h3, h4 {
 /* Objective Cards with SVG icons */
 .objective-card {
   display: flex;
-  gap: 1.25rem;
-  padding: 1.75rem;
-  border-left: 3px solid var(--border);
-  margin-bottom: 1.5rem;
-  transition: border-color 0.3s, transform 0.3s, background 0.3s;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--lake-light);
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
-  border-radius: 0 8px 8px 0;
+  border-radius: 8px;
+  background: var(--white);
 }
 
 .objective-card:hover {
-  border-left-color: var(--lake-light);
-  transform: translateX(6px);
-  background: var(--cream);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px var(--shadow);
+  border-top-color: var(--navy);
 }
 
 .objective-icon {
@@ -1367,12 +1258,9 @@ h1, h2, h3, h4 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .objectives-grid {
+  .objectives-cards {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
   }
-
-  .objectives-map { order: -1; max-width: 360px; margin: 0 auto; }
 
   .photo-strip-item { height: 200px; }
 

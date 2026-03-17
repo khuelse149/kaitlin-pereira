@@ -245,21 +245,7 @@
     });
   });
 
-  // ---- 9. INTERACTIVE LAKE MAP — click to scroll ----
-  document.querySelectorAll('.lake-hotspot').forEach(function(hs) {
-    hs.addEventListener('click', function() {
-      var targetId = hs.getAttribute('data-scroll');
-      var target = document.getElementById(targetId);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        // Flash highlight
-        target.classList.add('highlight-flash');
-        setTimeout(function() { target.classList.remove('highlight-flash'); }, 1500);
-      }
-    });
-  });
-
-  // ---- 10. ANIMATED WAVE ENERGY SPECTRUM ----
+  // ---- 9. ANIMATED WAVE ENERGY SPECTRUM ----
   var specCanvas = document.getElementById('spectrum-canvas');
   if (specCanvas) {
     var sCtx = specCanvas.getContext('2d');
