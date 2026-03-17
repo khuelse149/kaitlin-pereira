@@ -148,10 +148,10 @@
     // --- Water caustics (light patterns on water surface) ---
     function drawCaustics() {
       ctx.save();
-      ctx.globalAlpha = 0.025;
+      ctx.globalAlpha = 0.045;
       ctx.strokeStyle = 'rgba(150,220,255,1)';
-      ctx.lineWidth = 0.8;
-      for (var i = 0; i < 12; i++) {
+      ctx.lineWidth = 1;
+      for (var i = 0; i < 16; i++) {
         ctx.beginPath();
         var yBase = H * 0.5 + i * 40 + Math.sin(time * 0.005 + i) * 20;
         for (var x = 0; x < W; x += 8) {
