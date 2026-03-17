@@ -245,4 +245,100 @@
     });
   });
 
+  // ---- 9. INTERACTIVE LAKE MAP — click to scroll ----
+  document.querySelectorAll('.lake-hotspot').forEach(function(hs) {
+    hs.addEventListener('click', function() {
+      var targetId = hs.getAttribute('data-scroll');
+      var target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Flash highlight
+        target.classList.add('highlight-flash');
+        setTimeout(function() { target.classList.remove('highlight-flash'); }, 1500);
+      }
+    });
+  });
+
+  // ---- 10. ANIMATED WAVE ENERGY SPECTRUM ----
+  var specCanvas = document.getElementById('spectrum-canvas');
+  if (specCanvas) {
+    var sCtx = specCanvas.getContext('2d');
+    var sTime = 0;
+
+    function resizeSpec() {
+      specCanvas.width = specCanvas.parentElement.offsetWidth;
+      specCanvas.height = specCanvas.parentElement.offsetHeight;
+    }
+    resizeSpec();
+    window.addEventListener('resize', resizeSpec);
+
+    // JONSWAP-like spectral shape: S(f) = α * g² / (2π)⁴ * f⁻⁵ * exp(-5/4 * (fp/f)⁴) * γʳ
+    function jonswap(f, fp, gamma) {
+      if (f <= 0) return 0;
+      var sigma = f <= fp ? 0.07 : 0.09;
+      var r = Math.exp(-Math.pow(f - fp, 2) / (2 * sigma * sigma * fp * fp));
+      var S = Math.pow(f, -5) * Math.exp(-1.25 * Math.pow(fp / f, 4)) * Math.pow(gamma, r);
+      return S;
+    }
+
+    var specObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          animateSpectrum();
+          specObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    specObs.observe(specCanvas);
+
+    function animateSpectrum() {
+      sTime += 0.008;
+      var w = specCanvas.width, h = specCanvas.height;
+      sCtx.clearRect(0, 0, w, h);
+
+      // Draw multiple spectral curves with slight variation
+      for (var s = 0; s < 3; s++) {
+        var fp = 0.08 + s * 0.015 + Math.sin(sTime + s) * 0.005;
+        var gamma = 3.3 + Math.sin(sTime * 0.7 + s * 2) * 0.5;
+        var alpha = [0.08, 0.05, 0.035][s];
+
+        sCtx.beginPath();
+        var maxS = 0;
+        var points = [];
+        for (var x = 0; x < w; x++) {
+          var f = 0.02 + (x / w) * 0.25;
+          var val = jonswap(f, fp, gamma);
+          if (val > maxS) maxS = val;
+          points.push({ x: x, val: val });
+        }
+
+        // Normalize and draw
+        for (var p = 0; p < points.length; p++) {
+          var px = points[p].x;
+          var py = h - 20 - (points[p].val / maxS) * (h * 0.6);
+          // Add subtle noise
+          py += Math.sin(px * 0.05 + sTime * 3 + s) * 2;
+          if (p === 0) sCtx.moveTo(px, py);
+          else sCtx.lineTo(px, py);
+        }
+
+        sCtx.strokeStyle = 'rgba(200, 181, 96, ' + alpha + ')';
+        sCtx.lineWidth = s === 0 ? 2 : 1.2;
+        sCtx.stroke();
+      }
+
+      // Axis labels
+      sCtx.fillStyle = 'rgba(255,255,255,0.12)';
+      sCtx.font = '10px Inter, sans-serif';
+      sCtx.fillText('f (Hz)', w - 45, h - 6);
+      sCtx.save();
+      sCtx.translate(12, h / 2);
+      sCtx.rotate(-Math.PI / 2);
+      sCtx.fillText('S(f)', 0, 0);
+      sCtx.restore();
+
+      requestAnimationFrame(animateSpectrum);
+    }
+  }
+
 })();
