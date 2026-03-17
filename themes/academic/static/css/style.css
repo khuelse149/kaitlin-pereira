@@ -415,8 +415,14 @@ h1, h2, h3, h4 {
 }
 .wave-4 {
   fill: var(--white);
-  animation: wave-drift-2 11s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  width: 100%;
+  animation: wave-sway 8s ease-in-out infinite;
   bottom: -12px;
+}
+
+@keyframes wave-sway {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-3%); }
 }
 
 @keyframes wave-drift {
