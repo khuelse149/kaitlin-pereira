@@ -764,7 +764,7 @@ h1, h2, h3, h4 {
 .photo-strip-track {
   display: flex;
   gap: 4px;
-  animation: photo-scroll 35s linear infinite;
+  animation: photo-scroll 55s linear infinite;
   width: max-content;
 }
 
@@ -795,7 +795,7 @@ h1, h2, h3, h4 {
 
 @keyframes photo-scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-360px * 5 - 20px)); }
+  100% { transform: translateX(calc(-360px * 11 - 44px)); }
 }
 
 /* ============================================
@@ -1276,7 +1276,7 @@ h1, h2, h3, h4 {
   .photo-strip-item { width: 300px; height: 220px; }
   @keyframes photo-scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-300px * 5 - 20px)); }
+    100% { transform: translateX(calc(-300px * 11 - 44px)); }
   }
 
   .research-card { grid-template-columns: 1fr; }
@@ -1319,7 +1319,7 @@ h1, h2, h3, h4 {
   .photo-strip-item { width: 260px; height: 180px; }
   @keyframes photo-scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-260px * 5 - 20px)); }
+    100% { transform: translateX(calc(-260px * 11 - 44px)); }
   }
 
   .page-title { font-size: 1.7rem; }
