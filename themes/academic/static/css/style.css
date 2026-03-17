@@ -415,14 +415,9 @@ h1, h2, h3, h4 {
 }
 .wave-4 {
   fill: var(--white);
-  width: 100%;
-  animation: wave-sway 8s ease-in-out infinite;
   bottom: -12px;
-}
-
-@keyframes wave-sway {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(-3%); }
+  animation: none;
+  transform: translateX(0);
 }
 
 @keyframes wave-drift {
