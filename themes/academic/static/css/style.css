@@ -413,11 +413,14 @@ h1, h2, h3, h4 {
   animation: wave-drift 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite reverse;
   bottom: -8px;
 }
-.wave-4 {
-  fill: var(--white);
-  bottom: -12px;
-  animation: none;
-  transform: translateX(0);
+.wave-white-base {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: var(--white);
+  z-index: 4;
 }
 
 @keyframes wave-drift {
