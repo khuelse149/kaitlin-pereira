@@ -625,18 +625,42 @@ h1, h2, h3, h4 {
   gap: 1.5rem;
 }
 
-/* Full-Width Bathymetry Map */
+/* Full-Width Bathymetry Map with fade edges */
 .bathy-fullwidth {
   max-width: 1200px;
   margin: 1.5rem auto 2.5rem;
-  padding: 0 2rem;
+  padding: 0 4rem;
+  position: relative;
 }
 
 .bathy-fullwidth img {
   width: 100%;
   display: block;
   border-radius: 8px;
-  box-shadow: 0 8px 40px rgba(10, 22, 40, 0.35);
+}
+
+/* Ombre fade into white on left and right edges */
+.bathy-fullwidth::before,
+.bathy-fullwidth::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bathy-fullwidth::before {
+  left: 4rem;
+  background: linear-gradient(to right, var(--white) 0%, transparent 100%);
+  border-radius: 8px 0 0 8px;
+}
+
+.bathy-fullwidth::after {
+  right: 4rem;
+  background: linear-gradient(to left, var(--white) 0%, transparent 100%);
+  border-radius: 0 8px 8px 0;
 }
 
 /* ---- Wave Spectrum in Fellowship Card ---- */
