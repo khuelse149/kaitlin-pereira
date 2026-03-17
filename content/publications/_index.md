@@ -13,9 +13,9 @@ title: "Publications"
 
 <div class="pub-entry">
   <div class="pub-type">Submitted (Co-author)</div>
-  <div class="pub-title">BAMS-D-25-0117</div>
+  <div class="pub-title">Advancement of NOAA's Operational Coastal Ocean Component of the Unified Forecast System by Academia-Government Collaboration</div>
   <div class="pub-authors">Kelley, J. G. W., et al. (including <strong>Pereira, K.</strong>)</div>
-  <div class="pub-venue">Submitted to Bulletin of the American Meteorological Society, 2025.</div>
+  <div class="pub-venue">Submitted to Bulletin of the American Meteorological Society (BAMS-D-25-0117), 2025.</div>
 </div>
 
 ## Conference Presentations

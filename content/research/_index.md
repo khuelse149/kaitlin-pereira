@@ -97,6 +97,9 @@ My PhD research focuses on improving how large lakes are represented in operatio
       <span class="tag tag-outline">Coastal Modeling</span>
       <span class="tag tag-outline">Model Evaluation</span>
     </div>
+    <p style="font-size: 0.88rem; color: var(--text-light); margin-top: 0.5rem;">
+      Kelley, J. G. W., et al. (including <strong>Pereira, K.</strong>). "Advancement of NOAA's Operational Coastal Ocean Component of the Unified Forecast System by Academia-Government Collaboration." <em>Submitted to Bulletin of the American Meteorological Society.</em>
+    </p>
   </div>
   <div class="research-figure">
     <!-- Replace with: images/research-masters.png -->
