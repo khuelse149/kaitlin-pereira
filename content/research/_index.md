@@ -10,7 +10,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
   <div>
     <h3>1. Winter Wave Model Assessment</h3>
     <p>
-      How well does the WAVEWATCH III (WW3) spectral wave model predict winter wave conditions across the Great Lakes? Using newly deployed NOAA Spotter buoys alongside established NDBC stations, I'm conducting the most comprehensive winter wave validation for the Great Lakes to date. My analysis reveals that the dominant source of forecast error is the wave physics parameterization — not the atmospheric forcing — pointing toward specific model improvements that can reduce prediction error by 15–30%.
+      How well does the WAVEWATCH III (WW3) spectral wave model predict winter wave conditions across the Great Lakes? Using newly deployed NOAA Spotter buoys alongside established NDBC stations and high-resolution HRRR atmospheric forcing, I am conducting a comprehensive winter wave validation to identify the dominant sources of forecast error and evaluate pathways toward improved prediction skill.
     </p>
     <div class="research-tags">
       <span class="tag">WAVEWATCH III</span>
@@ -28,7 +28,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
   <div>
     <h3>2. SWOT Satellite Data Integration</h3>
     <p>
-      NASA's Surface Water and Ocean Topography (SWOT) satellite provides unprecedented spatial measurements of wave height across entire lake basins. I'm developing methods to co-locate SWOT observations with buoy measurements and model output to create the first satellite-based spatial validation of wave forecasts in the Great Lakes. This work bridges point observations and full-domain model output, revealing spatial patterns of model error that buoys alone cannot capture.
+      NASA's Surface Water and Ocean Topography (SWOT) satellite provides unprecedented spatial measurements of wave height across entire lake basins. I am developing methods to co-locate SWOT observations with buoy measurements and model output to enable the first satellite-based spatial evaluation of wave forecasts in the Great Lakes — bridging point-based observations and full-domain model output.
     </p>
     <div class="research-tags">
       <span class="tag">NASA SWOT</span>
@@ -44,9 +44,9 @@ My PhD research focuses on improving how large lakes are represented in operatio
 
 <div class="research-card">
   <div>
-    <h3>3. Surface Roughness Parameterization for NWP</h3>
+    <h3>3. Wind Gustiness &amp; Surface Roughness in Fetch-Limited Environments</h3>
     <p>
-      Wind gustiness — short-period fluctuations in wind speed — systematically affects wave growth in ways that current forecast models do not account for. Through 145 idealized numerical experiments, I've discovered that gustiness can both enhance <em>and</em> suppress wave heights depending on wave age and fetch, with up to 44% of Great Lakes grid points experiencing wave reduction under gusty conditions. This "crossover" effect has implications for how surface roughness is parameterized in coupled atmosphere-wave forecast systems.
+      Wind gustiness — short-period fluctuations in wind speed — affects wave growth in ways that current forecast models do not explicitly resolve. Through a suite of idealized numerical experiments, I am investigating how gustiness interacts with wave development and surface roughness across the fetch-limited Great Lakes, and what implications this has for coupled atmosphere-wave forecast systems.
     </p>
     <div class="research-tags">
       <span class="tag">Gustiness</span>
@@ -66,7 +66,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
   <div>
     <h3>Great Lakes Ice Floe Parameterization (Submitted)</h3>
     <p>
-      Current operational ice models for the Great Lakes use a fixed ice floe diameter of 300 m, but satellite observations reveal significant spatial and temporal variability in floe sizes. Using a decade of daily ice analyses from the U.S. and Canadian Ice Centers, I developed a spatially-varying floe size climatology and integrated it into the FVCOM hydrodynamic-ice model. Replacing the constant floe size with satellite-derived parameterizations improved ice thickness prediction accuracy by over 25% and produced more realistic spring melt timing — addressing a persistent bias in operational forecasts.
+      Current operational ice models for the Great Lakes use a fixed ice floe diameter, but satellite observations reveal significant spatial and temporal variability in floe sizes across the lakes. Using a decade of daily ice analyses from the U.S. and Canadian Ice Centers, I developed a spatially-varying floe size climatology and evaluated its impact on ice prediction using the FVCOM hydrodynamic-ice model.
     </p>
     <p style="font-size: 0.88rem; color: var(--text-light); margin-top: 0.5rem;">
       <strong>Pereira, K.</strong>, Anderson, E. J., Kessler, J., &amp; Fujisaki-Manome, A. "Integrating Ice Analyses and Varying Floe Size Parameterization into Great Lakes Ice Prediction." <em>Submitted.</em>
