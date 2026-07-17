@@ -20,7 +20,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
     </div>
   </div>
   <div class="research-figure">
-    <!-- Replace with: images/research-validation.png -->
+    <img src="/kaitlin-pereira/images/research-validation.png" alt="Radial climatology of observed Great Lakes significant wave height by month, colored by HRRR wind speed — winter months dominate">
   </div>
 </div>
 
@@ -38,7 +38,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
     </div>
   </div>
   <div class="research-figure">
-    <!-- Replace with: images/research-swot.png -->
+    <img src="/kaitlin-pereira/images/research-swot.png" alt="SWOT KaRIn swath coverage over the Great Lakes with co-located Spotter and NDBC validation stations">
   </div>
 </div>
 
@@ -56,7 +56,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
     </div>
   </div>
   <div class="research-figure">
-    <!-- Replace with: images/research-gustiness.png -->
+    <img src="/kaitlin-pereira/images/research-gustiness.png" alt="GLWU unstructured wave model domain and idealized steady-versus-gusty wind forcing used in the gustiness experiments">
   </div>
 </div>
 
@@ -74,7 +74,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
     </div>
   </div>
   <div class="research-figure">
-    <!-- Replace with: images/research-meteotsunami.png -->
+    <img src="/kaitlin-pereira/images/research-meteotsunami.png" alt="Schematic of a meteotsunami: a moving atmospheric pressure disturbance driving a resonant long wave that amplifies at the coast">
   </div>
 </div>
 
