@@ -20,7 +20,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
     </div>
   </div>
   <div class="research-figure">
-    <img src="/kaitlin-pereira/images/research-validation.png" alt="Radial climatology of observed Great Lakes significant wave height by month, colored by HRRR wind speed — winter months dominate">
+    <img src="/kaitlin-pereira/images/research-validation.gif" alt="Animated NOAA GLERL ice-cover chart of the Great Lakes showing winter ice growth">
   </div>
 </div>
 
@@ -56,7 +56,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
     </div>
   </div>
   <div class="research-figure">
-    <img src="/kaitlin-pereira/images/research-gustiness.png" alt="GLWU unstructured wave model domain and idealized steady-versus-gusty wind forcing used in the gustiness experiments">
+    <img src="/kaitlin-pereira/images/research-gustiness.png" alt="Heatmap of significant wave height anomaly as a function of wave age and wind gust factor">
   </div>
 </div>
 
@@ -74,7 +74,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
     </div>
   </div>
   <div class="research-figure">
-    <img src="/kaitlin-pereira/images/research-meteotsunami.png" alt="Schematic of a meteotsunami: a moving atmospheric pressure disturbance driving a resonant long wave that amplifies at the coast">
+    <img src="/kaitlin-pereira/images/research-meteotsunami.gif" alt="Animated HRRR 10-meter wind field over Lake Michigan during the May 2025 meteotsunami event">
   </div>
 </div>
 
@@ -98,7 +98,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
     </div>
   </div>
   <div class="research-figure">
-    <!-- Replace with: images/research-ice.png -->
+    <img src="/kaitlin-pereira/images/research-ice.png" alt="Spatially-varying ice floe size climatology across the Great Lakes derived from a decade of ice analyses">
   </div>
 </div>
 
@@ -138,6 +138,6 @@ My PhD research focuses on improving how large lakes are represented in operatio
     </div>
   </div>
   <div class="research-figure">
-    <!-- Replace with: images/research-idaho.png -->
+    <img src="/kaitlin-pereira/images/research-superfund.jpg" alt="The Bunker Hill mining and smelting complex in Kellogg, Idaho, a Superfund site (EPA, public domain)">
   </div>
 </div>
