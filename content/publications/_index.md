@@ -5,10 +5,10 @@ title: "Publications"
 ## Journal Articles
 
 <div class="pub-entry">
-  <div class="pub-type">Submitted</div>
-  <div class="pub-title">Integrating Ice Analyses and Varying Floe Size Parameterization into Great Lakes Ice Prediction</div>
+  <div class="pub-type">Journal Article</div>
+  <div class="pub-title">Integrating Ice Analyses and Varying Floe Size Parameterization Into Great Lakes Ice Prediction</div>
   <div class="pub-authors"><strong>Pereira, K.</strong>, Anderson, E. J., Kessler, J., Fujisaki-Manome, A.</div>
-  <div class="pub-venue">Submitted, 2026.</div>
+  <div class="pub-venue"><em>Water Resources Research</em>, 2026. <a href="https://doi.org/10.1029/2025WR041518" target="_blank">doi:10.1029/2025WR041518</a></div>
 </div>
 
 <div class="pub-entry">
@@ -19,6 +19,13 @@ title: "Publications"
 </div>
 
 ## Conference Presentations
+
+<div class="pub-entry">
+  <div class="pub-type">Poster Presentation</div>
+  <div class="pub-title">Wave Age — Not Season — Controls Great Lakes Wave-Height Bias: Winter Validation of NOAA's Operational Wave Forecast with New Winter Buoys and NASA SWOT</div>
+  <div class="pub-authors"><strong>Pereira, K.</strong>, Anderson, E. J.</div>
+  <div class="pub-venue">Unifying Innovations in Forecasting Capabilities Workshop (UIFCW26) — Earth Prediction Innovation Center, July 2026.</div>
+</div>
 
 <div class="pub-entry">
   <div class="pub-type">Workshop Presentation</div>
