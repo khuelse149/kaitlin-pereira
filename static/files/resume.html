@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaitlin Pereira - Resume</title>
+<style>
+  @page {
+    margin: 0.55in 0.65in;
+    size: letter;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Garamond', 'Georgia', 'Times New Roman', serif;
+    color: #1a1a1a;
+    line-height: 1.25;
+    font-size: 10.5pt;
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 0.55in 0.65in;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── Header ── */
+  .header {
+    text-align: center;
+    margin-bottom: 10pt;
+    padding-bottom: 6pt;
+    border-bottom: 1.5pt solid #2c5f7c;
+  }
+  .header h1 {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 22pt;
+    font-weight: 600;
+    letter-spacing: 2.5pt;
+    color: #2c5f7c;
+    text-transform: uppercase;
+    margin-bottom: 5pt;
+  }
+  .header .contact {
+    font-size: 9.5pt;
+    color: #444;
+    letter-spacing: 0.3pt;
+  }
+  .header .contact a {
+    color: #444;
+    text-decoration: none;
+  }
+  .header .contact .sep {
+    margin: 0 6pt;
+    color: #999;
+  }
+
+  /* ── Section Headings ── */
+  .section-title {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 10pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2pt;
+    color: #2c5f7c;
+    border-bottom: 0.75pt solid #b8c9d4;
+    padding-bottom: 2pt;
+    margin-top: 8pt;
+    margin-bottom: 4pt;
+  }
+
+  /* ── Professional Summary ── */
+  .summary {
+    font-size: 10pt;
+    line-height: 1.35;
+    color: #333;
+    margin-bottom: 2pt;
+  }
+
+  /* ── Entries ── */
+  .entry {
+    margin-bottom: 5pt;
+  }
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1pt;
+  }
+  .entry-title {
+    font-weight: 700;
+    font-size: 10.5pt;
+    color: #1a1a1a;
+  }
+  .entry-date {
+    font-size: 9.5pt;
+    color: #555;
+    white-space: nowrap;
+    font-style: italic;
+  }
+  .entry-subtitle {
+    font-style: italic;
+    font-size: 10pt;
+    color: #444;
+    margin-bottom: 2pt;
+  }
+  .entry-detail {
+    font-size: 9.5pt;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 2pt;
+  }
+
+  /* ── Bullet Lists ── */
+  ul {
+    margin-left: 14pt;
+    margin-top: 1pt;
+  }
+  li {
+    font-size: 10pt;
+    line-height: 1.3;
+    margin-bottom: 1pt;
+    color: #222;
+  }
+
+  /* ── Education ── */
+  .edu-entry {
+    margin-bottom: 3pt;
+  }
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .edu-school {
+    font-weight: 700;
+    font-size: 10.5pt;
+  }
+  .edu-date {
+    font-size: 9.5pt;
+    color: #555;
+    font-style: italic;
+  }
+  .edu-degree {
+    font-style: italic;
+    font-size: 10pt;
+    color: #333;
+  }
+  .edu-note {
+    font-size: 9.5pt;
+    color: #444;
+    margin-left: 10pt;
+    margin-top: 1pt;
+  }
+
+  /* ── Skills Grid ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1pt 20pt;
+    margin-top: 2pt;
+  }
+  .skill-category {
+    font-size: 10pt;
+    line-height: 1.4;
+    margin-bottom: 2pt;
+  }
+  .skill-label {
+    font-weight: 700;
+    color: #2c5f7c;
+    font-size: 9pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+  }
+  .skill-items {
+    color: #333;
+    font-size: 9.5pt;
+  }
+
+  /* ── Compact lists for orgs/certs ── */
+  .compact-list {
+    font-size: 9.5pt;
+    color: #333;
+    line-height: 1.45;
+  }
+  .compact-list .item-title {
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  /* ── Two Column ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2pt 24pt;
+  }
+
+  /* ── Print ── */
+  @media print {
+    body {
+      padding: 0;
+      font-size: 10.5pt;
+    }
+    .section-title {
+      page-break-after: avoid;
+    }
+    .entry {
+      page-break-inside: avoid;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════ HEADER ════════════ -->
+<div class="header">
+  <h1>Kaitlin Pereira</h1>
+  <div class="contact">
+    Golden, CO<span class="sep">|</span>(208) 871-9866<span class="sep">|</span>khuelse@mines.edu<span class="sep">|</span>kate.leora.pereira@gmail.com
+  </div>
+</div>
+
+<!-- ════════════ PROFESSIONAL SUMMARY ════════════ -->
+<div class="section-title">Professional Summary</div>
+<div class="summary">
+  Coastal scientist and environmental engineer with 9 years of consulting and research experience in hydrodynamic modeling, coastal hazard assessment, and environmental remediation. Currently conducting NOAA-funded PhD research on wave forecasting and surface roughness parameterization with direct applications to coastal resilience. Background includes FEMA floodplain studies, environmental site assessments, and regulatory compliance under CERCLA/RCRA.
+</div>
+
+<!-- ════════════ EDUCATION ════════════ -->
+<div class="section-title">Education</div>
+
+<div class="edu-entry">
+  <div class="edu-header">
+    <span class="edu-school">Colorado School of Mines</span>
+    <span class="edu-date">Expected 2027</span>
+  </div>
+  <div class="edu-degree">Ph.D., Civil and Environmental Engineering</div>
+  <div class="edu-note">Dissertation: "Winter Wave Dynamics in the Great Lakes: Integrating New Data Sources to Improve Predictive Models"<br>
+  Advisor: Eric J. Anderson (ex-NOAA). Mentors: Hendrik Tolman (WW3 developer, NOAA), Jessica Meixner (NOAA/EMC)</div>
+</div>
+
+<div class="edu-entry">
+  <div class="edu-header">
+    <span class="edu-school">Colorado School of Mines</span>
+    <span class="edu-date">2023</span>
+  </div>
+  <div class="edu-degree">M.S., Hydrologic Science and Engineering</div>
+  <div class="edu-note">NOAA Coastal Hydrodynamic Modeling Research Assistant. Evaluated numerical oceanographic modeling systems for coastal inundation forecast guidance.<br>
+  <strong>NOAA UFS Coastal Application Team collaborator</strong> &mdash; configure, test, and optimize FVCOM alongside model developers and university partners across disciplines.</div>
+</div>
+
+<div class="edu-entry">
+  <div class="edu-header">
+    <span class="edu-school">University of Idaho</span>
+    <span class="edu-date">2017</span>
+  </div>
+  <div class="edu-degree">B.S., Geological Sciences, Hydrogeology Emphasis</div>
+</div>
+
+<!-- ════════════ RESEARCH EXPERIENCE ════════════ -->
+<div class="section-title">Research Experience</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">NOAA WINGS Dissertation Fellow &mdash; Colorado School of Mines</span>
+    <span class="entry-date">2025 &ndash; Present</span>
+  </div>
+  <div class="entry-subtitle">Wave Modeling, Coastal Hazard Science &amp; Surface Roughness Parameterization</div>
+  <ul>
+    <li>Conducting doctoral research evaluating and improving NOAA's operational WaveWatch III wave forecasting system for the Great Lakes, with direct applications to coastal flood risk management and climate adaptation</li>
+    <li>Designed and executed 145 idealized numerical experiments to characterize wind variability effects on wave growth in fetch-limited basins &mdash; multiple novel findings in preparation for publication</li>
+    <li>Integrated NASA SWOT satellite altimetry with in-situ buoy data for spatially distributed wave and surface roughness assessment</li>
+    <li>Mentor undergraduate researcher on satellite data analysis; manage research milestones and deliverables through shared project tracking platform</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">NOAA UFS Coastal Application Team (CAT) Fellow</span>
+    <span class="entry-date">2022 &ndash; 2024</span>
+  </div>
+  <div class="entry-subtitle">Hydrodynamic Modeling &amp; Coastal Inundation Assessment</div>
+  <ul>
+    <li>Developed unstructured 3D FVCOM meshes for baroclinic simulations to enhance coastal navigation and inundation forecasts for large-lake and coastal systems</li>
+    <li>Integrated atmospheric forcing (GFS/HRRR) and validated model skill for water levels, currents, temperature, and salinity per NOAA operational forecast standards</li>
+    <li>Presented research findings to federal partners through monthly NOAA UFS project calls, effectively communicating complex modeling results to diverse technical audiences</li>
+  </ul>
+</div>
+
+<!-- ════════════ CONSULTING & ENGINEERING EXPERIENCE ════════════ -->
+<div class="section-title">Consulting &amp; Engineering Experience</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">WSP (formerly Wood PLC) &mdash; Denver, CO</span>
+    <span class="entry-date">2022 &ndash; 2023</span>
+  </div>
+  <div class="entry-subtitle">Water Resource Engineer</div>
+  <ul>
+    <li>Performed hydraulic modeling and floodplain mapping for FEMA flood insurance studies, applying HEC-RAS, HEC-HMS, EPA SWMM, and ArcGIS to assess coastal and riverine flood risk</li>
+    <li>Supported floodplain management, stormwater engineering, drainage design, and dam and levee safety evaluations</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Applied Intellect &mdash; Golden, CO</span>
+    <span class="entry-date">2021 &ndash; 2022</span>
+  </div>
+  <div class="entry-subtitle">Staff Hydrologist &amp; GIS Technical Lead</div>
+  <ul>
+    <li>Led GIS technical program, developing ESRI-based applications and geoanalytic solutions for environmental site characterization and regulatory compliance</li>
+    <li>Managed compliance, assessment, and remediation projects under CERCLA, RCRA, and state environmental programs</li>
+    <li>Designed and built a hazardous materials inventory data management system for all BLM offices across Montana, North Dakota, and South Dakota</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Idaho Department of Water Resources &mdash; Boise, ID</span>
+    <span class="entry-date">2020 &ndash; 2021</span>
+  </div>
+  <div class="entry-subtitle">Water Resource Agent</div>
+  <ul>
+    <li>Reviewed and evaluated water rights applications for regulatory compliance; prepared recommendations for state appropriation and modification decisions</li>
+    <li>Conducted field exams measuring flow rates, collecting GPS data, and quantifying water budgets to assess beneficial use</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Tetra Tech, Inc. &mdash; Boise, ID</span>
+    <span class="entry-date">2017 &ndash; 2020</span>
+  </div>
+  <div class="entry-subtitle">Environmental Scientist / Field Technician</div>
+  <ul>
+    <li>Prepared technical reports, SPCC plans, Environmental Impact Statements, and Phase I &amp; Phase II Environmental Site Assessments</li>
+    <li>Reviewed energy facility siting standards and coordinated with federal, state, and local regulatory agencies</li>
+    <li>Conducted soil, sediment, groundwater, and surface water sampling and technical data analysis across multiple field campaigns</li>
+  </ul>
+</div>
+
+<!-- ════════════ TECHNICAL SKILLS ════════════ -->
+<div class="section-title">Technical Expertise</div>
+<div class="skills-grid">
+  <div class="skill-category">
+    <span class="skill-label">Coastal &amp; Ocean Modeling:</span><br>
+    <span class="skill-items">WaveWatch III, FVCOM, HEC-RAS, HEC-HMS, EPA SWMM</span>
+  </div>
+  <div class="skill-category">
+    <span class="skill-label">Programming &amp; Data Science:</span><br>
+    <span class="skill-items">Python (advanced), MATLAB (advanced), R, SQL, HPC/SLURM</span>
+  </div>
+  <div class="skill-category">
+    <span class="skill-label">Geospatial &amp; Visualization:</span><br>
+    <span class="skill-items">ArcGIS Pro, AutoCAD Civil 3D, ESRI suite, NetCDF/GRIB</span>
+  </div>
+  <div class="skill-category">
+    <span class="skill-label">Coastal &amp; Environmental Science:</span><br>
+    <span class="skill-items">Wave dynamics, surface roughness, air-sea interaction, SWOT satellite remote sensing, floodplain mapping, environmental site assessment, CERCLA/RCRA compliance</span>
+  </div>
+</div>
+
+<!-- ════════════ PUBLICATIONS & PRESENTATIONS ════════════ -->
+<div class="section-title">Publications &amp; Presentations</div>
+<div class="compact-list">
+  <p style="margin-bottom:1pt;font-size:9pt;font-weight:600;color:#2c5f7c;text-transform:uppercase;letter-spacing:0.5pt;">Journal Articles (Submitted)</p>
+  <p style="margin-bottom:2pt;font-size:9.5pt;"><span class="item-title">Pereira, K.</span>, Anderson, E.J., Kessler, J., Fujisaki-Manome, A. "Integrating Ice Analyses and Varying Floe Size Parameterization into Great Lakes Ice Prediction." <em>Submitted to Water Resources Research, 2026.</em></p>
+  <p style="margin-bottom:4pt;font-size:9.5pt;">Kelley, J.G.W., et al. (including <span class="item-title">Pereira, K.</span>). "Advancement of NOAA's Operational Coastal Ocean Component of the Unified Forecast System by Academia-Government Collaboration." <em>Submitted to Bulletin of the AMS, 2025.</em></p>
+  <p style="margin-bottom:1pt;font-size:9pt;font-weight:600;color:#2c5f7c;text-transform:uppercase;letter-spacing:0.5pt;">Conference Presentations</p>
+  <p style="margin-bottom:2pt;font-size:9.5pt;">Faber, E., Dhavale, S., Knisely, J., <span class="item-title">Huelse, K.</span>, Howard, L., Fernandez, E.M. "NOAA WPO's WINGS Fellowship Transition." <em>UIFCW25 Workshop &mdash; Earth Prediction Innovation Center, 2025.</em></p>
+  <p style="margin-bottom:2pt;font-size:9.5pt;"><span class="item-title">Pereira, K.</span>, Anderson, E.J. "Winter Wave Dynamics in the Great Lakes: Improving Predictive Models with New Data Sources." <em>Oral presentation, 105th AMS Annual Meeting, New Orleans, LA, January 2025.</em></p>
+  <p style="margin-bottom:2pt;font-size:9.5pt;"><span class="item-title">Pereira, K.</span>, Anderson, E.J., Fujisaki-Manome, A., Kessler, J. "Dynamic Ice Floe Parameterization in the Great Lakes for Enhanced Predictive Models." <em>Poster, 104th AMS Annual Meeting, Baltimore, MD, January 2024.</em></p>
+</div>
+
+<!-- ════════════ HONORS, FELLOWSHIPS & CERTIFICATIONS ════════════ -->
+<div class="section-title">Fellowships, Honors &amp; Certifications</div>
+<div class="compact-list" style="font-size:10pt; line-height:1.3;">
+  <p style="margin-bottom:2pt;"><span class="item-title">NOAA WINGS Dissertation Fellowship</span> (NSF/NOAA, 2025 &ndash; 2027) &mdash; Competitive national fellowship for next-generation weather and climate scientists</p>
+  <p style="margin-bottom:2pt;"><span class="item-title">UFS Coastal Application Team Fellowship</span> (NOAA, 2023 &ndash; 2024) &mdash; Development and evaluation of next-generation coastal hydrodynamic models</p>
+  <p style="margin-bottom:2pt;"><span class="item-title">Outstanding Hydrologic Science and Engineering Graduate Student Award</span> (Colorado School of Mines, 2023)</p>
+  <p style="margin-bottom:2pt;"><span class="item-title">GIS Professional Certificate</span> (Colorado School of Mines, 2022)</p>
+  <p style="margin-bottom:2pt;"><span class="item-title">OSHA Certified Environmental Specialist</span> (2020) &nbsp;|&nbsp; <span class="item-title">OSHA 40-Hr HAZWOPER</span> (2020)</p>
+</div>
+
+<!-- ════════════ PROFESSIONAL AFFILIATIONS ════════════ -->
+<div class="section-title">Professional Affiliations</div>
+<div class="compact-list" style="font-size:10pt;">
+  American Water Resources Association &nbsp;|&nbsp; Society of Women Engineers &nbsp;|&nbsp; American Meteorological Society
+</div>
+
+</body>
+</html>
