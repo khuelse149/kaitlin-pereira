@@ -1036,14 +1036,20 @@ h1, h2, h3, h4 {
 /* ---- Research Cards ---- */
 .research-card {
   display: grid;
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: 1fr 260px;
   gap: 2rem;
+  align-items: center;
   padding: 2rem;
   border: 1px solid var(--border);
   border-radius: 10px;
   margin-bottom: 1.5rem;
   background: var(--cream);
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card 3 (gustiness) gets a larger figure column */
+.research-card--wide {
+  grid-template-columns: 1fr 360px;
 }
 
 .research-card:hover {
@@ -1093,11 +1099,11 @@ h1, h2, h3, h4 {
 .research-figure {
   border-radius: 8px;
   overflow: hidden;
-  background: var(--silver-light);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 180px;
+  align-self: center;
   position: relative;
 }
 
@@ -1107,10 +1113,15 @@ h1, h2, h3, h4 {
   font-size: 0.9rem;
 }
 
+/* Hide the placeholder text once a real image is in the figure */
+.research-figure:has(img)::after {
+  display: none;
+}
+
 .research-figure img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
   position: relative;
   z-index: 1;
 }
@@ -1286,8 +1297,6 @@ h1, h2, h3, h4 {
     100% { transform: translateX(calc(-300px * 11 - 44px)); }
   }
 
-  .research-card { grid-template-columns: 1fr; }
-  .research-figure { min-height: 160px; }
   .contact-grid { grid-template-columns: 1fr; }
 
   .hero-landing .hero-name { font-size: 2.8rem; }
@@ -1296,6 +1305,9 @@ h1, h2, h3, h4 {
 
 @media (max-width: 640px) {
   .nav-toggle { display: flex; }
+
+  .research-card { grid-template-columns: 1fr; }
+  .research-figure { min-height: 160px; }
 
   .nav-links {
     display: none;

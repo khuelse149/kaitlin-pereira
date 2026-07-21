@@ -1,5 +1,6 @@
 ---
 title: "Research"
+draft: true
 ---
 
 ## Ongoing Research
@@ -20,7 +21,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
     </div>
   </div>
   <div class="research-figure">
-    <img src="/kaitlin-pereira/images/research-validation.gif" alt="Animated NOAA GLERL ice-cover chart of the Great Lakes showing winter ice growth">
+    <img src="/kaitlin-pereira/images/research-ice-fetch.gif" alt="Animated ice-limited fetch calculation at NDBC buoy 45003 (Lake Huron), showing wind direction, fetch distance, and NIC ice concentration through winter 2025">
   </div>
 </div>
 
@@ -42,7 +43,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
   </div>
 </div>
 
-<div class="research-card">
+<div class="research-card research-card--wide">
   <div>
     <h3>3. Wind Gustiness &amp; Surface Roughness in Fetch-Limited Environments</h3>
     <p>
@@ -56,7 +57,7 @@ My PhD research focuses on improving how large lakes are represented in operatio
     </div>
   </div>
   <div class="research-figure">
-    <img src="/kaitlin-pereira/images/research-gustiness.png" alt="Heatmap of significant wave height anomaly as a function of wave age and wind gust factor">
+    <img src="/kaitlin-pereira/images/research-crossover.png" alt="Significant wave height enhancement versus wave age across every Great Lakes water grid point, showing the crossover near wave age 8.4 where gustiness switches from reducing to enhancing waves">
   </div>
 </div>
 
